@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+    background-image: url('images/login.jpeg');
+    font-family: "Roboto", sans-serif;
+    background-repeat: no-repeat;
+    background-size: 1475px;
+  }
+  
+  .signup-box {
+    width: 360px;
+    height: 550px;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .login-box {
+    width: 370px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+    margin-top: 250px;
+    border-radius: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: palevioletred;
+    color: white;
+    font-size: 18px;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para-2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 15px;
+    margin-top: -10px;
+    font-weight: 900;
+
+  }
+  .para-2 a {
+    color: #0043ff;
+    font-weight: 900;
+  }
+  .button{
+    cursor: pointer;
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: palevioletred;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+
+  }
+  
+      </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="" id="email" />
+        <label>Password</label>
+        <input type="password" placeholder="" id="password"/>
+        <script> 
+
+            function printPopUp() { 
+      
+                alert("Logged in Successfully") 
+      
+                window.print(); 
+      
+            } 
+            function validate(){
+                var username=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+                if (username=="admin@gmail.com" && password=="admin")
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }}
+            function validate2(){
+              if(validate()==true){
+                alert("Logged in Successfully");
+                window.open("index.html");
+              }
+              else{
+                alert("Login Failed")
+
+              }
+            }
+        </script> 
+        <center>
+          <button class="button" onclick="validate2()" onClick="printPopUp()">Submit</button>
+      <closeform></closeform></form>
+    </div>
+    <p class="para-2">
+      Dont have an account? &nbsp;<a href="signup.html">Sign Up Here</a>
+    </p>
+  </body>
+</html>
